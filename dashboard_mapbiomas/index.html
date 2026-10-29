@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5ef"><title>Teresópolis em transformação | MapBiomas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Teresópolis, início"><span class="brand-mark">T</span><span>TERESÓPOLIS<br><small>MAPBIOMAS</small></span></a>
+      <nav><a class="active" href="#inicio"><i>01</i> Visão geral</a><a href="#classes"><i>02</i> Classes</a><a href="#mudancas"><i>03</i> Mudanças</a><a href="#mapas"><i>04</i> Mapas</a></nav>
+      <div class="rail-foot"><span class="live-dot"></span> 1985 <b>→</b> 2025<br><small>40 anos observados</small></div>
+    </aside>
+    <main id="inicio">
+      <header class="topbar"><div class="crumb">PAINEL TERRITORIAL <span>/</span> TERESÓPOLIS, RJ</div><div class="period"><span>1985</span><b>—</b><span>2025</span><span class="period-tag">40 anos</span></div></header>
+      <section class="hero">
+        <div><p class="eyebrow"><span class="live-dot"></span> USO E COBERTURA DA TERRA</p><h1>Uma paisagem,<br><em>duas épocas.</em></h1><p class="hero-sub">Compare como o território de Teresópolis foi classificado entre 1985 e 2025.</p></div>
+        <div class="hero-art" aria-hidden="true"><span class="sun"></span><svg viewBox="0 0 390 190" role="presentation"><path d="M0 145 73 68l46 47 55-83 71 99 43-48 102 77v30H0z" fill="#24513f"/><path d="m0 162 83-62 61 54 62-73 75 57 48-33 61 32v53H0z" fill="#7f9b67"/><path d="m144 154 62-73 40 52-39-16-29 25z" fill="#f3f1df"/><path d="m72 68 18 20-23-4m107-52 22 29-27-11" fill="#f3f1df"/></svg></div>
+      </section>
+      <section class="metric-grid" aria-label="Indicadores principais">
+        <article class="metric metric-total"><span class="metric-label">ÁREA ANALISADA</span><strong id="totalArea">—</strong><span class="metric-unit">hectares nos dois anos</span><div class="metric-icon">▦</div></article>
+        <article class="metric"><span class="metric-label">PERMANECEU IGUAL</span><strong id="stableArea">—</strong><span class="metric-unit"><b id="stablePct">—</b> da área</span><div class="metric-bar"><i id="stableBar"></i></div></article>
+        <article class="metric"><span class="metric-label">MUDOU DE CLASSE</span><strong id="changedArea">—</strong><span class="metric-unit"><b id="changedPct">—</b> da área</span><div class="metric-bar change"><i id="changedBar"></i></div></article>
+        <article class="metric metric-forest"><span class="metric-label">FORMAÇÃO FLORESTAL</span><strong id="forestDelta">—</strong><span class="metric-unit">variação líquida • hectares</span><span class="forest-leaf">↗</span></article>
+      </section>
+      <section class="section-block" id="classes">
+        <div class="section-head"><div><p class="eyebrow">01 / COMPARAÇÃO DE CLASSES</p><h2>O que ocupava mais espaço?</h2><p class="section-sub">Cada linha compara a área da classe nos dois anos.</p></div><div class="controls"><label for="classSearch">Buscar classe</label><input id="classSearch" type="search" placeholder="Ex.: Pastagem" autocomplete="off"></div></div>
+        <div class="panel chart-panel"><div class="chart-legend"><span><i class="swatch old"></i>1985</span><span><i class="swatch new"></i>2025</span><button id="sortClasses" class="text-button" type="button">Ordenar: maior em 2025 <span>↕</span></button></div><div id="classChart" class="class-chart" role="img" aria-label="Gráfico comparando área por classe em hectares"></div></div>
+      </section>
+      <section class="two-col" id="mudancas">
+        <article class="panel flow-panel"><div class="section-head compact"><div><p class="eyebrow">02 / PRINCIPAIS TRANSIÇÕES</p><h2>De uma classe para outra</h2></div><span class="tiny-label">HECTARES</span></div><p class="section-sub">As maiores áreas que mudaram de classificação.</p><div id="flowChart" class="flow-chart"></div></article>
+        <article class="panel matrix-panel"><div class="section-head compact"><div><p class="eyebrow">03 / TODAS AS TRANSIÇÕES</p><h2>O mapa das mudanças</h2></div><span class="tiny-label">1985 → 2025</span></div><p class="section-sub">Toque em uma célula para ver a área que passou entre classes.</p><div class="matrix-wrap"><div id="matrixChart" class="matrix-chart"></div></div><div id="matrixTip" class="matrix-tip" aria-live="polite">Selecione uma célula da matriz</div></article>
+      </section>
+      <section class="section-block map-section" id="mapas"><div class="section-head"><div><p class="eyebrow">04 / OLHO NO TERRITÓRIO</p><h2>Teresópolis, vista por classes</h2></div><span class="map-label"><i class="live-dot"></i> MAPBIOMAS • 1985 E 2025</span></div><div class="panel map-panel"><img src="assets/mapas_1985_2025.png" alt="Mapas temáticos de uso e cobertura da terra em Teresópolis nos anos de 1985 e 2025, lado a lado"></div></section>
+      <footer class="footer"><span>TERESÓPOLIS <b>·</b> RIO DE JANEIRO</span><span>MAPBIOMAS COLEÇÃO 11 <b>·</b> 1985—2025</span></footer>
+    </main>
+  </div>
+</body></html>
